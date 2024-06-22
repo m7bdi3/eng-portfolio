@@ -18,18 +18,13 @@ export function HeaderF1() {
   }, [inView]);
 
   const FADE_DOWN_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      y: 350,
-      x: 0,
-      transition: { type: "spring", stiffness: 100 },
-    },
+    hidden: { opacity: 0, y: -100 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } },
   };
 
   return (
     <motion.div
-      exit="hidden"
+      initial="hidden"
       animate={isInView ? "show" : "hidden"}
       viewport={{ once: true }}
       variants={{
@@ -37,22 +32,27 @@ export function HeaderF1() {
         show: {
           transition: {
             staggerChildren: 0.15,
-            delayChildren: 0.15,
+            delayChildren: 0.25,
           },
         },
       }}
-      className="absoulte bottom-0 flex items-center justify-center w-full h-full"
+      className="absolute bottom-0 flex items-center justify-center w-full"
       ref={ref}
     >
       <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
-        <Image
-          src="/parallex/f1.png"
-          alt="f1"
-          width={1400}
-          height={600}
-          className="z-10"
-          priority={true}
-        />
+        <div className="w-full flex flex-col items-center justify-center">
+          <Image
+            src="/parallex/f1.png"
+            alt="Lantern"
+            width={1200}
+            height={100}
+            className="z-10"
+            style={{
+              width: "100vw",
+              height: "auto",
+            }}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );

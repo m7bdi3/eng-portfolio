@@ -36,7 +36,7 @@ export default function PricingSectionCards() {
   }, [inView]);
 
   return (
-    <div className="py-4 lg:py-6">
+    <div className="py-4 lg:py-6 ">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -44,7 +44,7 @@ export default function PricingSectionCards() {
         variants={{
           visible: { transition: { staggerChildren: 0.2 } },
         }}
-        className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center"
+        className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center "
       >
         {/* Card */}
         <motion.div
@@ -52,7 +52,7 @@ export default function PricingSectionCards() {
           whileHover={{ scale: [null, 0.9, 1.1] }}
           transition={{ duration: 0.3 }}
         >
-          <Card>
+          <Card className="h-full">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Free</CardTitle>
               <span className="font-bold text-5xl">Free</span>
@@ -90,7 +90,7 @@ export default function PricingSectionCards() {
           whileHover={{ scale: [null, 0.9, 1.2] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="border-primary">
+          <Card className="border-primary h-full">
             <CardHeader className="text-center pb-2">
               <Badge className="uppercase w-max self-center mb-3">
                 Most popular
@@ -129,7 +129,7 @@ export default function PricingSectionCards() {
           whileHover={{ scale: [null, 0.9, 1.1] }}
           transition={{ duration: 0.3 }}
         >
-          <Card>
+          <Card className="h-full">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Team</CardTitle>
               <span className="font-bold text-5xl">£89</span>
@@ -167,7 +167,7 @@ export default function PricingSectionCards() {
           whileHover={{ scale: [null, 0.9, 1.1] }}
           transition={{ duration: 0.3 }}
         >
-          <Card>
+          <Card className="h-full">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Enterprise</CardTitle>
               <span className="font-bold text-5xl">149</span>

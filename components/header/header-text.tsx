@@ -34,7 +34,7 @@ export function HeaderFadeDown() {
           },
         },
       }}
-      className="mt-8"
+      className="absolute top-[30]"
       ref={ref}
     >
       <motion.h1
@@ -47,7 +47,7 @@ export function HeaderFadeDown() {
         className="mt-6 text-center md:text-2xl"
         variants={FADE_DOWN_ANIMATION_VARIANTS}
       >
-         Preview
+        Preview
       </motion.p>
     </motion.div>
   );

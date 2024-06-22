@@ -47,8 +47,8 @@ export const Introduction = () => {
   };
 
   return (
-    <div className="relative h-[100svh] flex items-center" ref={ref}>
-      <div className="flex flex-col gap-4 h-full justify-center mx-auto md:w-[80%]">
+    <div className="relative h-screen flex items-center justify-center container" ref={ref}>
+      <div className="flex flex-col gap-4 h-full justify-center mx-auto">
         <motion.div
           whileHover={{ scale: [null, 1, 1.2] }}
           transition={{ duration: 0.3 }}

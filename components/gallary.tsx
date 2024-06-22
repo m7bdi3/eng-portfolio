@@ -116,7 +116,7 @@ export const Gallery = () => {
   };
 
   return (
-    <div className="overflow-x-hidden overflow-y-hidden mx-4">
+    <div className="overflow-x-hidden overflow-y-hidden container">
       <motion.div
         initial="hidden"
         animate={isInView ? "show" : "hidden"}

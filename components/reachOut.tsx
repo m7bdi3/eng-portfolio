@@ -51,8 +51,8 @@ export const ReachOut = () => {
     );
   };
   return (
-    <div className="h-[100svh] w-full flex flex-col items-center justify-center px-12 gap-x-8">
-      <div className="border border-dashed border-primary relative p-2">
+    <div className="h-screen flex flex-col items-center justify-center container">
+      <div className="border border-dashed border-primary relative">
         <Icon className="-top-3 -left-3" />
         <Icon className="-top-3 -right-3" />
         <Icon className="-bottom-3 -left-3" />
@@ -65,7 +65,7 @@ export const ReachOut = () => {
               variants={pullupVariant}
               initial="initial"
               custom={i}
-              className="text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[3rem]"
+              className="text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[3rem]"
             >
               {letter === " " ? <span>&nbsp;</span> : letter}
             </motion.h1>

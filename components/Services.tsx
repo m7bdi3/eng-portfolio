@@ -29,7 +29,7 @@ export const Services = () => {
     },
   };
   return (
-    <div className="h-[100svh] px-4 w-full flex flex-col items-center justify-center">
+    <div className="h-screen px-4 w-full flex flex-col items-center justify-center">
       <motion.div
         exit="hidden"
         animate={isInView ? "show" : "hidden"}
@@ -46,11 +46,10 @@ export const Services = () => {
         ref={ref}
       >
         <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
-          <h2 className="text-6xl font-bold">Our Services</h2>
+          <h2 className="text-4xl md:text-6xl font-bold">Our Services</h2>
         </motion.div>
       </motion.div>
       <Separator className="w-[400px] text-primary" />
-
       <PricingSectionCards />
     </div>
   );

@@ -40,13 +40,19 @@ export function HeaderLantern() {
       ref={ref}
     >
       <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
-        <Image
-          src="/parallex/lantern.png"
-          alt="Lantern"
-          width={200}
-          height={100}
-          className="z-10"
-        />
+        <div className="w-full flex flex-col items-center justify-center">
+          <Image
+            src="/parallex/lantern.png"
+            alt="Lantern"
+            width={130}
+            height={100}
+            className="z-10"
+            style={{
+              width: "60%",
+              height: "auto",
+            }}
+          />
+        </div>
       </motion.div>
     </motion.div>
   );
