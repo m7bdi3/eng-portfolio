@@ -116,7 +116,7 @@ export const Gallery = () => {
   };
 
   return (
-    <div className="overflow-x-hidden overflow-y-hidden container">
+    <div className="overflow-x-hidden overflow-y-hidden">
       <motion.div
         initial="hidden"
         animate={isInView ? "show" : "hidden"}
@@ -141,7 +141,7 @@ export const Gallery = () => {
       </motion.div>
 
       <div className="flex-1 flex flex-col h-full justify-center">
-        <div className="border border-dashed border-zinc-400 dark:border-zinc-700 relative ">
+        <div className="border border-dashed border-primary relative ">
           <Icon className="-top-3 -left-3" />
           <Icon className="-top-3 -right-3" />
           <Icon className="-bottom-3 -left-3" />

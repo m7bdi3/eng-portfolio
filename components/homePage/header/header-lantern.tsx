@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-export function HeaderF1() {
+export function HeaderLantern() {
   const [isInView, setIsInView] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0.6,
@@ -36,21 +36,17 @@ export function HeaderF1() {
           },
         },
       }}
-      className="absolute bottom-0 flex items-center justify-center w-full"
+      className="absolute top-0 flex items-center justify-center w-full z-10"
       ref={ref}
     >
       <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
         <div className="w-full flex flex-col items-center justify-center">
           <Image
-            src="/parallex/f1.png"
+            src="/parallex/lantern.png"
             alt="Lantern"
-            width={1200}
+            width={130}
             height={100}
-            className="z-10"
-            style={{
-              width: "100vw",
-              height: "auto",
-            }}
+            className="w-[40%] md:w-[60%] lg:w-[80%]"
           />
         </div>
       </motion.div>

@@ -7,13 +7,12 @@ import {
 
 export default function IconSection() {
   return (
-    <>
-      {/* Icon Blocks */}
-      <div className="container py-4 lg:py-6">
+   
+      <div className="p-4 w-full">
         {/* Grid */}
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="lg:w-3/4">
-            <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+          <div className="">
+            <h2 className=" border-b pb-2 text-xl md:text-2xl lg:text-4xl font-semibold tracking-tight transition-colors first:mt-0">
               Collaborative tools to design better user experience
             </h2>
             <p className="mt-3 text-muted-foreground">
@@ -90,7 +89,5 @@ export default function IconSection() {
         </div>
         {/* End Grid */}
       </div>
-      {/* End Icon Blocks */}
-    </>
   );
 }

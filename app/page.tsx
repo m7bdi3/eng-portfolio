@@ -1,19 +1,19 @@
 "use client";
-import { NewsLetter } from "@/components/NewsLetter";
-import { Services } from "@/components/Services";
-import { Gallery } from "@/components/gallary";
-import { MainHeader } from "@/components/header";
-import { Introduction } from "@/components/introduction";
-import { ReachOut } from "@/components/reachOut";
+import { NewsLetter } from "@/components/homePage/NewsLetter";
+import { Services } from "@/components/homePage/Services";
+import { Gallery } from "@/components/homePage/gallary";
+import { MainHeader } from "@/components/homePage/header";
+import { Introduction } from "@/components/homePage/introduction";
+import { ReachOut } from "@/components/homePage/reachOut";
 export default function Home() {
   return (
-    <>
+    <div className="space-y-[16rem]">
       <MainHeader />
       <Introduction />
       <Services />
       <Gallery />
       <ReachOut />
       <NewsLetter />
-    </>
+    </div>
   );
 }

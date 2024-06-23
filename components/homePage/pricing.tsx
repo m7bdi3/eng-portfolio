@@ -36,23 +36,22 @@ export default function PricingSectionCards() {
   }, [inView]);
 
   return (
-    <div className="py-4 lg:py-6 ">
+    <div className="relative flex h-full w-full items-center justify-center" ref={ref}>
       <motion.div
-        ref={ref}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={{
           visible: { transition: { staggerChildren: 0.2 } },
         }}
-        className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center "
+        className="grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-4 gap-4"
       >
-        {/* Card */}
+        
         <motion.div
           variants={cardVariants}
-          whileHover={{ scale: [null, 0.9, 1.1] }}
+          whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="h-full">
+          <Card className="h-full w-full">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Free</CardTitle>
               <span className="font-bold text-5xl">Free</span>
@@ -76,18 +75,14 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                Sign up
-              </Button>
-            </CardFooter>
+           
           </Card>
         </motion.div>
-        {/* End Card */}
-        {/* Card */}
+        
+        
         <motion.div
           variants={cardVariants}
-          whileHover={{ scale: [null, 0.9, 1.2] }}
+          whileHover={{ scale: [null, 0.9, 1.1] }}
           transition={{ duration: 0.3 }}
         >
           <Card className="border-primary h-full">
@@ -117,16 +112,13 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full">Sign up</Button>
-            </CardFooter>
           </Card>
         </motion.div>
-        {/* End Card */}
-        {/* Card */}
+        
+        
         <motion.div
           variants={cardVariants}
-          whileHover={{ scale: [null, 0.9, 1.1] }}
+          whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
           <Card className="h-full">
@@ -153,18 +145,14 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                Sign up
-              </Button>
-            </CardFooter>
+           
           </Card>
         </motion.div>
-        {/* End Card */}
-        {/* Card */}
+        
+        
         <motion.div
           variants={cardVariants}
-          whileHover={{ scale: [null, 0.9, 1.1] }}
+          whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
           <Card className="h-full">
@@ -191,14 +179,10 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full" variant={"outline"}>
-                Sign up
-              </Button>
-            </CardFooter>
+            
           </Card>
         </motion.div>
-        {/* End Card */}
+        
       </motion.div>
     </div>
   );

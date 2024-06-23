@@ -7,9 +7,6 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 
 export const Introduction = () => {
-  const word1 = "About";
-  const word2 = "us";
-
   const variants1 = {
     hidden: { filter: "blur(10px)", opacity: 0 },
     visible: { filter: "blur(0px)", opacity: 1 },
@@ -47,10 +44,17 @@ export const Introduction = () => {
   };
 
   return (
-    <div className="relative h-screen flex items-center justify-center container" ref={ref}>
-      <div className="flex flex-col gap-4 h-full justify-center mx-auto">
+    <div className="h-full my-12 flex items-center justify-center" ref={ref} style={{
+      backgroundImage:
+        "url('/intro1.jpg')",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}>
+      <div className="flex flex-col gap-4 h-full justify-center mx-auto w-[90%]">
         <motion.div
-          whileHover={{ scale: [null, 1, 1.2] }}
+          whileHover={{ scale: [null, 1, 1.05] }}
           transition={{ duration: 0.3 }}
         >
           <div className="border border-dashed border-primary relative bg-white p-4">
@@ -72,7 +76,7 @@ export const Introduction = () => {
                 </motion.h1>
               </AnimatePresence>
             </div>
-            <p className="text-gray-700 text-lg dark:text-gray-300">
+            <p className="text-lg md:text-xl lg:text-2xl">
               Innovative Design Group is a premier architectural firm committed
               to transforming visions into reality. With a legacy of excellence
               in design and construction, we specialize in creating
@@ -87,15 +91,6 @@ export const Introduction = () => {
             </p>
           </div>
         </motion.div>
-      </div>
-      <div className="absolute right-0 -z-10 items-end py-20 mx-auto">
-        <Image
-          src={"/intro1.jpg"}
-          alt="intro"
-          className="object-cover rounded-tr-3xl rounded-bl-3xl rounded-tl-[4rem] rounded-br-[4rem]"
-          width={1920}
-          height={1275}
-        />
       </div>
     </div>
   );

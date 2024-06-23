@@ -21,7 +21,6 @@ export const Footer = () => {
           className="absolute top-0 left-0 h-[80px]"
         />
         <div className=" h-full flex flex-col items-center justify-center">
-
           <Link href="/" className="self-start w-full">
             <h1 className="text-white text-4xl font-bold">Brand</h1>
           </Link>
@@ -38,34 +37,42 @@ export const Footer = () => {
               </p>
             </div>
 
-<div className="w-full flex items-center justify-around">
+            <div className="w-full flex items-center justify-around">
+              <div className="flex flex-col justify-center gap-2">
+                <h5 className="text-xl font-semibold">Website</h5>
+                <Link href="/" className="text-sm md:text-base font-medium">
+                  Blog
+                </Link>
+                <Link href="/" className="text-sm md:text-base font-medium">
+                  Authors
+                </Link>
+                <Link href="/" className="text-sm md:text-base font-medium">
+                  Categories
+                </Link>
+              </div>
 
-            <div className="flex flex-col justify-center gap-2">
-              <h5 className="text-xl font-semibold">Website</h5>
-              <Link href="/" className="text-sm md:text-base font-medium">
-                Blog
-              </Link>
-              <Link href="/" className="text-sm md:text-base font-medium">
-                Authors
-              </Link>
-              <Link href="/" className="text-sm md:text-base font-medium">
-                Categories
-              </Link>
+              <div className="flex flex-col gap-2 justify-center">
+                <h5 className="text-xl font-semibold">Legal</h5>
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm md:text-base font-medium"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms-of-service"
+                  className="text-sm md:text-base font-medium"
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  href="/cookie-policy"
+                  className="text-sm md:text-base font-medium"
+                >
+                  Cookie Policy
+                </Link>
+              </div>
             </div>
-
-            <div className="flex flex-col gap-2 justify-center">
-              <h5 className="text-xl font-semibold">Legal</h5>
-              <Link href="/privacy-policy" className="text-sm md:text-base font-medium">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="text-sm md:text-base font-medium">
-                Terms of Service
-              </Link>
-              <Link href="/cookie-policy" className="text-sm md:text-base font-medium">
-                Cookie Policy
-              </Link>
-            </div>
-</div>
           </div>
         </div>
       </footer>

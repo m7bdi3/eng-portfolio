@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import PricingSectionCards from "./pricing";
-import { Separator } from "./ui/separator";
+import { Separator } from "../ui/separator";
 
 export const Services = () => {
   const [isInView, setIsInView] = useState(false);
@@ -20,22 +20,21 @@ export const Services = () => {
   }, [inView]);
 
   const FADE_DOWN_ANIMATION_VARIANTS = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, y: 100 },
     show: {
       opacity: 1,
-      y: -50,
-      x: 0,
+      y: 0,
       transition: { type: "spring", stiffness: 100 },
     },
   };
   return (
-    <div className="h-screen px-4 w-full flex flex-col items-center justify-center">
+    <div className="h-full w-full flex items-center justify-center my-12">
+      <div className="relative h-full w-full">
       <motion.div
         exit="hidden"
         animate={isInView ? "show" : "hidden"}
         viewport={{ once: true }}
         variants={{
-          hidden: {},
           show: {
             transition: {
               staggerChildren: 0.15,
@@ -44,13 +43,15 @@ export const Services = () => {
           },
         }}
         ref={ref}
+        className="h-full w-full flex flex-col items-center justify-center"
       >
         <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
           <h2 className="text-4xl md:text-6xl font-bold">Our Services</h2>
         </motion.div>
+        <Separator className="w-[60%] text-primary mb-12" />
+        <PricingSectionCards />
       </motion.div>
-      <Separator className="w-[400px] text-primary" />
-      <PricingSectionCards />
+      </div>
     </div>
   );
 };

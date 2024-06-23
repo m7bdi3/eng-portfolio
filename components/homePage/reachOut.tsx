@@ -28,7 +28,7 @@ export const ReachOut = () => {
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.05, // Delay each letter's animation by 0.05 seconds
+        delay: i * 0.05,
       },
     }),
   };
@@ -51,13 +51,13 @@ export const ReachOut = () => {
     );
   };
   return (
-    <div className="h-screen flex flex-col items-center justify-center container">
-      <div className="border border-dashed border-primary relative">
+    <div className="h-full flex flex-col items-center justify-center w-full my-12">
+      <div className="border border-dashed border-primary relative ">
         <Icon className="-top-3 -left-3" />
         <Icon className="-top-3 -right-3" />
         <Icon className="-bottom-3 -left-3" />
         <Icon className="-bottom-3 -right-3" />
-        <div className="flex justify-center m-4 ">
+        <div className="flex justify-center p-4 w-full ">
           {letters.map((letter, i) => (
             <motion.h1
               key={i}
@@ -65,7 +65,7 @@ export const ReachOut = () => {
               variants={pullupVariant}
               initial="initial"
               custom={i}
-              className="text-center text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[3rem]"
+              className="text-center text-2xl font-bold  drop-shadow-sm md:text-5xl md:leading-[3rem] "
             >
               {letter === " " ? <span>&nbsp;</span> : letter}
             </motion.h1>
@@ -84,7 +84,7 @@ export const ReachOut = () => {
               scale: 1,
             },
           }}
-          className="mt-8 overflow-y-hidden"
+          className="overflow-y-hidden"
           ref={ref}
         >
           <IconSection />

@@ -16,8 +16,8 @@ export const NewsLetter = () => {
   return (
     <>
       {/* Hero */}
-      <div className="relative h-screen">
-        <div className="container my-4">
+      <div className="relative h-full my-12">
+        <div className="">
           {/* Grid */}
           <div className="grid items-center md:grid-cols-2 gap-8 lg:gap-12">
             <div>

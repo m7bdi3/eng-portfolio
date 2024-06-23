@@ -7,12 +7,10 @@ import { HeaderF1 } from "./header/header-f1";
 
 export const MainHeader = () => {
   return (
-    <div className="relative h-screen w-full ">
-      <div className="relative h-full w-full flex flex-col items-center justify-around">
-        <HeaderLantern />
-        <HeaderFadeDown />
-        <HeaderF1 />
-      </div>
+    <div className="relative h-[100dvh] w-full flex flex-col items-center justify-around">
+      <HeaderLantern />
+      <HeaderFadeDown />
+      <HeaderF1 />
     </div>
   );
 };
