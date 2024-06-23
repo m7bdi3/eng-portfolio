@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import { MobileNavbar } from "@/components/mobile-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <Navbar className="hidden md:flex" />
+        <MobileNavbar className="flex md:hidden" />
         <div className="container p-0 m-0 mx-auto rounded-lg">{children}</div>
         <Footer />
       </body>

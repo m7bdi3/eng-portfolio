@@ -36,7 +36,7 @@ export function HeaderLantern() {
           },
         },
       }}
-      className="absolute top-0 flex items-center justify-center w-full"
+      className="absolute top-0 flex items-center justify-center w-full z-10"
       ref={ref}
     >
       <motion.div variants={FADE_DOWN_ANIMATION_VARIANTS}>
@@ -46,7 +46,7 @@ export function HeaderLantern() {
             alt="Lantern"
             width={130}
             height={100}
-            className="z-10"
+            
             style={{
               width: "60%",
               height: "auto",

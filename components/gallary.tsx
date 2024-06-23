@@ -73,7 +73,7 @@ export const Gallery = () => {
   }, [inView]);
 
   const FADE_DOWN_ANIMATION_VARIANTS = {
-    hidden: { opacity: 1, y: -500 },
+    hidden: { opacity: 1, y: 100 },
     show: { opacity: 1, y: 0, transition: { type: "spring" } },
   };
 
