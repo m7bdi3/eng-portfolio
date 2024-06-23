@@ -11,9 +11,9 @@ export default function Home() {
       <MainHeader />
       <Introduction />
       <Services />
+      <NewsLetter />
       <Gallery />
       <ReachOut />
-      <NewsLetter />
     </div>
   );
 }
