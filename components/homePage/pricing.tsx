@@ -24,7 +24,7 @@ const cardVariants = {
 export default function PricingSectionCards() {
   const [isInView, setIsInView] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -36,7 +36,10 @@ export default function PricingSectionCards() {
   }, [inView]);
 
   return (
-    <div className="relative flex h-full w-full items-center justify-center" ref={ref}>
+    <div
+      className="relative flex h-full w-full items-center justify-center"
+      ref={ref}
+    >
       <motion.div
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -45,13 +48,12 @@ export default function PricingSectionCards() {
         }}
         className="grid lg:grid-cols-4 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-2 grid-cols-1 grid-rows-4 gap-4"
       >
-        
         <motion.div
           variants={cardVariants}
           whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="h-full w-full">
+          <Card className="h-full flex flex-col justify-between">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Free</CardTitle>
               <span className="font-bold text-5xl">Free</span>
@@ -75,17 +77,18 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-           
+            <CardFooter className="w-full items-center justify-center flex">
+              <Button className="w-full p-4 ">Sign UP</Button>
+            </CardFooter>
           </Card>
         </motion.div>
-        
-        
+
         <motion.div
           variants={cardVariants}
           whileHover={{ scale: [null, 0.9, 1.1] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="border-primary h-full">
+          <Card className="h-full flex flex-col justify-between border-primary">
             <CardHeader className="text-center pb-2">
               <Badge className="uppercase w-max self-center mb-3">
                 Most popular
@@ -112,16 +115,18 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
+            <CardFooter className="w-full items-center justify-center flex">
+              <Button className="w-full p-4 ">Sign UP</Button>
+            </CardFooter>
           </Card>
         </motion.div>
-        
-        
+
         <motion.div
           variants={cardVariants}
           whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="h-full">
+          <Card className="h-full flex flex-col  justify-between">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Team</CardTitle>
               <span className="font-bold text-5xl">£89</span>
@@ -145,17 +150,18 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-           
+            <CardFooter className="w-full items-center justify-center flex">
+              <Button className="w-full p-4 ">Sign UP</Button>
+            </CardFooter>
           </Card>
         </motion.div>
-        
-        
+
         <motion.div
           variants={cardVariants}
           whileHover={{ scale: [null, 0.9, 1.05] }}
           transition={{ duration: 0.3 }}
         >
-          <Card className="h-full">
+          <Card className="h-full flex flex-col justify-between">
             <CardHeader className="text-center pb-2">
               <CardTitle className="mb-7">Enterprise</CardTitle>
               <span className="font-bold text-5xl">149</span>
@@ -179,10 +185,11 @@ export default function PricingSectionCards() {
                 </li>
               </ul>
             </CardContent>
-            
+            <CardFooter className="w-full items-center justify-center flex">
+              <Button className="w-full p-4 ">Sign UP</Button>
+            </CardFooter>
           </Card>
         </motion.div>
-        
       </motion.div>
     </div>
   );

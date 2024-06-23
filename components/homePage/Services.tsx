@@ -8,7 +8,7 @@ import { Separator } from "../ui/separator";
 export const Services = () => {
   const [isInView, setIsInView] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.2,
   });
 
   useEffect(() => {
