@@ -38,7 +38,7 @@ export default function ContactForm() {
   return (
     <section className="mx-auto z-20 ">
       <div className="relative z-10 max-w-4xl mx-auto space-y-4">
-        <Card className="relative py-12 z-20 bg-transparent">
+        <Card className="relative py-12 z-20 bg-white">
           <CardHeader>
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
               Contact Us
@@ -97,7 +97,7 @@ export default function ContactForm() {
               <Button
                 disabled={pending}
                 variant="default"
-                className="p-6 text-lg"
+                className="p-6 text-lg text-white active:text-gray-800 hover:text-gray-800 hover:bg-accent"
               >
                 Submit
                 {pending ? (

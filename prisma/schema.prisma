@@ -13,10 +13,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model User {
-    id       Int     @id @default(autoincrement())
-    email    String  @unique
-    name     String?
+  id    Int     @id @default(autoincrement())
+  email String  @unique
+  name  String?
 }
 
+model ProjectForm {
+  id             Int      @id @default(autoincrement())
+  fullName       String
+  email          String
+  phone          String
+  projectType    String
+  description    String
+  location       String
+  date           DateTime
+  additionalInfo String?
+}

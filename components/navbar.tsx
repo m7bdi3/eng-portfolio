@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 type Props = {
   className?: string;
 };
@@ -12,22 +13,36 @@ export const Navbar = ({ className }: Props) => {
       )}
     >
       <div className="w-full flex-1">
-        <h1 className="text-[#a36d3e] text-4xl font-bold">Brand</h1>
+        <Link href={"/"} className="text-primary text-4xl font-bold">
+          Brand
+        </Link>
       </div>
       <div className="md:flex gap-4 items-center hidden">
-        <p className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4">
+        <Link
+          href={"/about"}
+          className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4"
+        >
           About
-        </p>
-        <p className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4">
+        </Link>
+        <Link
+          href={"/portfolio"}
+          className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4"
+        >
           Portfolio
-        </p>
-        <p className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4">
+        </Link>
+        <Link
+          href={"/services"}
+          className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4"
+        >
           Services
-        </p>
+        </Link>
 
-        <p className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4">
+        <Link
+          href={"/contact"}
+          className="text-xl font-medium text-primary hover:underline cursor-pointer underline-offset-4"
+        >
           Contact
-        </p>
+        </Link>
       </div>
     </nav>
   );

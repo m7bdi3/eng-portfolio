@@ -3,8 +3,8 @@ import React from "react";
 
 export const MailReach = () => {
   return (
-    <section className="my-12 h-full w-full">
-      <div className="relative z-10 max-w-xl mx-auto sm:text-center">
+    <section className=" border p-4 h-full max-w-4xl mx-auto rounded-lg">
+      <div className="relative z-10  mx-auto sm:text-center max-w-2xl">
         <div className="space-y-3">
           <h3 className="text-3xl  font-bold tracking-tighter ">
             Subscribe to our newsletter
