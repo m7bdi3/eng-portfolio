@@ -1,5 +1,6 @@
 import React from "react";
 import { Marquee } from "./marquee";
+import { Separator } from "../ui/separator";
 
 export const NewsLetter = () => {
   return (
@@ -139,12 +140,15 @@ export const NewsLetter = () => {
             </blockquote>
           </div>
         </div>
-
-        <div className="mt-6 md:mt-12 py-3 flex items-center text-muted-foreground text-sm gap-x-1.5 after:flex-[1_1_0%] after:border-t after:ms-6 after:border-t-muted-foreground/50">
-          <span className="font-semibold bg-clip-text text-primary">
-            50,000
-          </span>
-          individuals and companies trust our company
+        <div className="w-full flex items-center justify-center mt-6">
+          <Separator className="flex-1 text-neutral-800" />
+          <div className="flex justify-center gap-x-4 px-4">
+            <p className="text-lg text-primary">50,000</p>
+            <p className="w-full ">
+              individuals and companies trust our company
+            </p>
+          </div>
+          <Separator className="flex-1 text-neutral-800" />
         </div>
 
         <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg">

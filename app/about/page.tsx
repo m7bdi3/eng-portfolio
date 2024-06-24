@@ -6,11 +6,11 @@ import { Vision } from "@/components/aboutPage/vision";
 
 export default function AboutPage() {
   return (
-    <div className="h-full container">
+    <div className="h-full container space-y-12">
       <AboutHero />
       <History />
-      <Team />
       <Vision />
+      <Team />
     </div>
   );
 }

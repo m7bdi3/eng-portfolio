@@ -4,6 +4,7 @@ import { Services } from "@/components/homePage/Services";
 import { Gallery } from "@/components/homePage/gallary";
 import { MainHeader } from "@/components/homePage/header";
 import { Introduction } from "@/components/homePage/introduction";
+import { MailReach } from "@/components/homePage/mail";
 import { ReachOut } from "@/components/homePage/reachOut";
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <NewsLetter />
       <Gallery />
       <ReachOut />
+      <MailReach/>
     </div>
   );
 }

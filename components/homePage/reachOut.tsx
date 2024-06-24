@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 export const ReachOut = () => {
   const [isInView, setIsInView] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.2,
   });
 
   useEffect(() => {
@@ -51,12 +51,8 @@ export const ReachOut = () => {
     );
   };
   return (
-    <div className="h-full flex flex-col items-center justify-center w-full my-12">
+    <div className="h-full flex flex-col items-center justify-center my-12">
       <div className="border border-dashed border-primary relative ">
-        <Icon className="-top-3 -left-3" />
-        <Icon className="-top-3 -right-3" />
-        <Icon className="-bottom-3 -left-3" />
-        <Icon className="-bottom-3 -right-3" />
         <div className="flex justify-center p-4 w-full ">
           {letters.map((letter, i) => (
             <motion.h1
@@ -88,6 +84,7 @@ export const ReachOut = () => {
           ref={ref}
         >
           <IconSection />
+          
         </motion.div>
       </div>
     </div>

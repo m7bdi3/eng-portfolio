@@ -90,7 +90,7 @@ export const History = () => {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center space-y-8">
+    <div className="h-full w-full flex flex-col items-center justify-center space-y-8 my-12">
       <div className="w-full items-center text-center justify-center flex flex-col gap-4 my-12">
         <h1 className="font-medium text-4xl md:text-6xl">About Us</h1>
         <p className="font-medium text-lg md:text-xl">
