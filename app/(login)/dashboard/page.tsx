@@ -10,18 +10,8 @@ import { columns } from "@/components/tables/employee-tables/columns";
 
 import { useProjects } from "@/lib/mails";
 
-type paramsProps = {
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-};
-export default function DashboardPage({ searchParams }: paramsProps) {
+export default function DashboardPage() {
   const projects = useProjects((state) => state.projects);
-  const page = Number(searchParams.page) || 1;
-  const pageLimit = Number(searchParams.limit) || 10;
-  const totalProjects = projects!.length;
-  const pageCount = Math.ceil(totalProjects / pageLimit);
-
   return (
     <div className="flex flex-col w-full space-y-4 p-4 pt-6 md:p-8 h-full">
       <div className="h-[10%] flex w-full justify-between">
@@ -59,10 +49,8 @@ export default function DashboardPage({ searchParams }: paramsProps) {
             className="w-full h-screen flex items-center justify-center"
           >
             <RequestsTable
-              pageNo={page}
               columns={columns as any}
               data={projects!.slice().reverse()}
-              pageCount={pageCount}
             />
           </TabsContent>
         </Tabs>

@@ -1,8 +1,6 @@
-import "../../globals.css";
+import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-import Header from "@/components/layout/header";
-import Sidebar from "@/components/layout/sidebar";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/layout/providers";
 import { auth } from "@/auth";

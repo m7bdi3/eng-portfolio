@@ -39,15 +39,13 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
-  pageNo: number;
   pageSizeOptions?: number[];
-  pageCount: number;
 }
 
 export function RequestsTable<TData, TValue>({
   columns,
   data,
-  pageCount,
+
   pageSizeOptions = [10, 20, 30, 40, 50],
 }: DataTableProps<TData, TValue>) {
   const router = useRouter();
@@ -104,7 +102,7 @@ export function RequestsTable<TData, TValue>({
   const table = useReactTable({
     data,
     columns,
-    pageCount: pageCount ?? -1,
+ 
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     state: {
