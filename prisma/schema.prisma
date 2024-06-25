@@ -29,4 +29,6 @@ model ProjectForm {
   location       String
   date           DateTime
   additionalInfo String?
+  opened         Boolean  @default(false)
+  completed      Boolean  @default(false)
 }
