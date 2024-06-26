@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signIn } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import GoogleSignInButton from '../github-auth-button';
@@ -44,6 +44,8 @@ export default function UserAuthForm() {
 
   return (
     <>
+    <Suspense>
+
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -84,6 +86,7 @@ export default function UserAuthForm() {
         </div>
       </div>
       <GoogleSignInButton />
+    </Suspense>
     </>
   );
 }
