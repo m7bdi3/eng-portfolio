@@ -38,7 +38,7 @@ export default function ContactForm() {
   return (
     <section className="mx-auto z-20 ">
       <div className="relative z-10 max-w-4xl mx-auto space-y-4">
-        <Card className="relative py-12 z-20 bg-white">
+        <Card className="relative py-12 z-20">
           <CardHeader>
             <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
               Contact Us

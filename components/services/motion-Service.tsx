@@ -22,7 +22,7 @@ const ServiceSection = ({ title, description, listItems, link, i }: Props) => {
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
 
   return (
-    <div className="sticky h-screen flex items-start w-full justify-center top-12 bg-white last:h-fit ">
+    <div className="sticky h-screen flex items-start w-full justify-center top-12 dark:bg-neutral-900 bg-white rounded-xl">
       <section className="flex flex-col items-center relative h-full w-full origin-top space-y-12 mt-12">
         <h2 className="text-center text-xl md:text-3xl lg:text-4xl font-bold">
           {title}

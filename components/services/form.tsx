@@ -80,7 +80,7 @@ export const FormSubmitComponent = () => {
 
   return (
     <Form {...form}>
-      <div className="border border-dashed mt-20 space-y-8 py-8 bg-white rounded-xl px-12">
+      <div className="border border-dashed mt-20 space-y-8 py-8 rounded-xl px-12">
         <h2 className="text-xl md:text-2xl lg:text-4xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-primary">
           Let&apos;s Discuss Your Project
         </h2>

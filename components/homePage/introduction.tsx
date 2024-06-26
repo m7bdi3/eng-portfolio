@@ -44,20 +44,13 @@ export const Introduction = () => {
   };
 
   return (
-    <div className="h-full my-12 flex items-center justify-center" ref={ref} style={{
-      backgroundImage:
-        "url('/intro1.jpg')",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-      backgroundRepeat: "no-repeat",
-      backgroundAttachment: "fixed",
-    }}>
+    <div className="h-full my-12 flex items-center justify-center" ref={ref}>
       <div className="flex flex-col gap-4 h-full justify-center mx-auto w-[90%]">
         <motion.div
           whileHover={{ scale: [null, 1, 1.05] }}
           transition={{ duration: 0.3 }}
         >
-          <div className="border border-dashed border-primary relative bg-white p-4">
+          <div className="border border-dashed border-primary relative  p-4">
             <Icon className="-top-3 -left-3" />
             <Icon className="-top-3 -right-3" />
             <Icon className="-bottom-3 -left-3" />
